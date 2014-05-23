@@ -13,7 +13,7 @@ class mailcatcher::params {
       $packages = ['ruby-dev', 'sqlite3', 'libsqlite3-dev', 'rubygems']
     }
     'Redhat': {
-      $packages = ['ruby-devel', 'sqlite', 'ruby-sqlite3', 'rubygems']
+      $packages = ['ruby-devel', 'sqlite', 'sqlite-devel', 'ruby-sqlite3', 'rubygems']
     }
     default: {
       fail("${::osfamily} is not supported.")
