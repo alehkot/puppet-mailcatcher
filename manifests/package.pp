@@ -12,6 +12,9 @@ class mailcatcher::package {
   package { 'mailcatcher':
     ensure   => present,
     provider => 'gem',
-    require  => Package[$mailcatcher::params::packages]
+    require  => [
+      Package[$mailcatcher::params::packages],
+      Class['php'],
+    ]
   }
 }
